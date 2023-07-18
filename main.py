@@ -146,6 +146,8 @@ def main():
 
         def draw(self):
             plt.clf()
+            plt.xlabel("с")
+            plt.ylabel("Па")
             plt.grid()
             for k in range(len(self.x1)):
                 plt.plot(self.x1[k], self.y1[k])
@@ -169,6 +171,8 @@ def main():
                 list_time[c] -= list_time[0]
             list_time[0] = 0
             plt.clf()
+            plt.xlabel("с")
+            plt.ylabel("Па")
             plt.grid()
             plt.plot(list_time, list_mean)
             plt.title(self.temp1)
@@ -190,6 +194,8 @@ def main():
                     list_time[c] -= list_time[0]
                 list_time[0] = 0
                 plt.clf()
+                plt.xlabel("с")
+                plt.ylabel("Па")
                 plt.grid()
                 plt.plot(list_time, list_mean)
                 plt.title(names_of_dat[names_of_dat.index(self.temp1) + 1])
@@ -212,6 +218,8 @@ def main():
                     list_time[c] -= list_time[0]
                 list_time[0] = 0
                 plt.clf()
+                plt.xlabel("с")
+                plt.ylabel("Па")
                 plt.grid()
                 plt.plot(list_time, list_mean)
                 # print(self.temp1)
@@ -222,6 +230,8 @@ def main():
 
         def save(self):
             plt.clf()
+            plt.xlabel("с")
+            plt.ylabel("Па")
             plt.grid()
             for k in range(len(self.x1)):
                 plt.plot(self.x1[k], self.y1[k])
@@ -244,6 +254,8 @@ def main():
                 list_time[c] -= list_time[0]
             list_time[0] = 0
             plt.clf()
+            plt.xlabel("с")
+            plt.ylabel("Па")
             plt.grid()
             plt.plot(list_time, list_mean)
             plt.title(self.temp1)
@@ -257,6 +269,8 @@ def main():
 
         def clear1(self):
             plt.clf()
+            plt.xlabel("с")
+            plt.ylabel("Па")
             plt.grid()
             plt.plot([], [])
             plt.title("Одиночный график")
@@ -294,6 +308,8 @@ if __name__ == '__main__':
         temp = new_file.iloc[i]['Точка::штамп времени'].split()
         new_file.iloc[i]['Точка::штамп времени'] = temp[1]
     plt.plot([], [])
+    plt.xlabel("с")
+    plt.ylabel("Па")
     plt.grid()
     plt.title("Комбинированный график")
     plt.savefig("1.png")
